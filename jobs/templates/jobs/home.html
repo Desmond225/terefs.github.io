@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  {% load staticfiles %}
+  <meta charset='UTF-8' />
+  <title>Floats</title>
+</head>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  margin-left: auto;
+  margin-right:auto;
+  text-align:center;
+  margin-top:5px;
+  color:grey;
+  background-color: #e6eae5;
+  background-size: 1400px;
+  background-repeat:no-repeat;
+  width:1400px;
+  height:300px;
+}
+
+.column {
+  padding:20px;
+  float: left;
+  width: 30%;
+  margin: 10px 2.5%;
+  height: 250px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius:2px;
+  margin-bottom:40px;
+  margin-right:auto;
+
+}
+
+.container {
+  overflow: hidden;
+  background-color: #e6eae5;
+}
+
+.page {
+  width:1400px;
+  margin: 0 auto;
+    background-color: #e6eae5;
+
+}
+
+.content {
+  margin-top:50px;
+  padding: 20px;
+  float: left;
+  width:750px;
+  margin-left:25px;
+  border: 1px solid grey;
+  border-radius:2px;
+  background-color:white;
+  margin-bottom:20px;
+  margin-right:auto;
+}
+
+
+.menu {
+  height: 100px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.sidebar {
+  margin-top: 20px;
+  float:right;
+  width:280px;
+  margin-right:1px;
+  padding:20px;
+
+}
+
+.article-image {
+  float: right;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top:100px;
+}
+
+.username {
+  margin-top: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.comment {
+  margin: 10px;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+p {
+  margin-bottom: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.footer {
+  overflow: hidden;
+  background-color: #e6eae5;
+}
+.welcome {
+  text-align:center;
+  font-size: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.sidebar-texts {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+
+hr.style-four {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.sidebar-heading {
+  width: 210px;
+  height: 40px;
+  position: relative;
+  background: white;
+}
+
+.sidebar-heading:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.arrow_box {
+  position: relative;
+  background: #88b7d5;
+  border: 4px solid #c2e1f5;
+}
+.title {
+  text-align:center;
+  font-size:60px;
+  padding: 5px;
+  background-color:#e6eae5;
+}
+
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+<body>
+
+  <div class="title">
+      Welcome to my golf page
+      <p class="lead text-muted">Current hours: 4250</p>
+      <hr>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{% url 'websites' %}">Hourly progress</a>
+        <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+        <a class="nav-item nav-link" href="#">Statistics</a>
+      </div>
+    </nav>
+  </div>
+
+
+
+<div class='container'>
+  <div class='page'>
+    <div class='content'>
+
+      <img src='media/images/progress.jpeg' class='article-image'/>
+
+      <h2>Welcome to my golf blog!</h2>
+
+      <p>My name is Desmond and I am a self thought (web) developer! I started
+        my journey in March 2018, after finding out my true passion didn't lie in
+        my former job as a physical therapist. I've always been keen about computers,
+        technology and numbers, so finding out about programming really opened
+        up my eyes. I started learning about C at first, quickly becoming engaged
+        in the whole process of learning. </p>
+
+        <p>Not long after this discovery I committed myself into applying the
+          10000 hour(s) rule on becoming a skilled programmer. What does this mean?
+          Well, studies have proven it would take 10000 hours of deliberate practice
+          to reach a world-class level on basically anything, given we are capeable
+          both physically and mentally.</p>
+
+          <p>The process of deliberate practice isn't new for me, since I started
+            applying this theory to golf as well back in 2013. I am currently 4200 hours
+            into that process, and the results have far exceeded my expectations.
+            To this date, I am playing of a 0.5 handicap, nearly on scratch level!
+            I have logged every hour of the journey in a blog, and also have a
+            <a href="https://www.youtube.com/terefs">youtube channel</a> on which my swing
+            transformation can be enjoyed.</p>
+
+            <p>So, in case you are curious about my journey in programming, I will
+              provide daily logging of my progress, using this website. Coming soon!</p>
+
+            </div>
+          </div>
+
+          <div class="sidebar">
+            <div class="sidebar-heading">
+              <h2 class="comment">Recent posts</h2>
+            </div>
+            <br>
+
+            <ul class="sidebar-texts">
+
+
+              <p><a href="blog/1">July 2018 progress</a></p>
+              <br>
+              <p><a href="blog/2">Scored 63 (-8) over 18 holes on Hoge Dijk medal tees!</a></p>
+              <br>
+              <p><a href="blog/3">June 2018 progress</a></p>
+              <br>
+              <p><a href="blog/4">Kennemer open 2018</a></p>
+              <br>
+              <p><a href="blog/5">May 2018 progress</a></p>
+              <br>
+              <p><a href="blog/6">Efteling open amateur golf tour: Nowhere near proper health</a></p>
+              <br>
+            </ul>
+          </div>
+
+          <div class='page'>
+            <div class='content'>
+
+                <p>test one</p>
+
+
+                    </div>
+                  </div>
+
+                  <div class='page'>
+                    <div class='content'>
+
+                        <p>test one</p>
+
+
+                            </div>
+                          </div>
+        {% for job in jobs.all %}
+        <div class="column">
+          <h3 class='username'>{{ job.summary }}</h3>
+          <p class='comment'>{{ job.detail }}</p>
+          <a class ='btn btn-primary' role='button' href="media/images/resume.pdf">See more</a>
+
+          <br>
+        </div>
+
+        {% endfor %}
+        </div>
+
+        <footer class="text-muted">
+          <div class="container text-center">
+            <p>Development by Terefs {% now "Y" %}</p>
+          </div>
+        </footer>
+      </div>
+    </body>
+    </html>

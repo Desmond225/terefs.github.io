@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  {% load staticfiles %}
+  <meta charset='UTF-8' />
+  <title>Floats</title>
+</head>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.column {
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 300px;
+  background-color:white;
+}
+
+.container {
+  overflow: hidden;
+
+}
+
+.page {
+  width:1150px;
+  margin: 0 auto;
+
+}
+
+.content {
+  margin-top:50px;
+  background-color: white;
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+  /* float: left; */
+  width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.menu {
+  height: 100px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+/* .sidebar {
+  margin-top: 50px;
+  float:right;
+  width:250px;
+  height: 750px;
+  margin-right:25px;
+
+} */
+
+.article-image {
+  float: right;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top:100px;
+}
+
+.article-image2 {
+  float:right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+}
+
+.avatar {
+  float: left;
+  width: 10px;
+  height: 250px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #778899;
+}
+.username {
+  margin-top: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.comment {
+  margin: 10px;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+p {
+  margin-bottom: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.footer {
+  overflow: hidden;
+  background-color: #e6eae5;
+}
+.welcome {
+  text-align:center;
+  font-size: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.sidebar-texts {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+
+hr.style-four {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.sidebar-heading {
+  width: 210px;
+  height: 40px;
+  position: relative;
+  background: white;
+}
+
+.sidebar-heading:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.arrow_box {
+  position: relative;
+  background: #88b7d5;
+  border: 4px solid #c2e1f5;
+}
+.heading {
+  text-align: center;
+  margin-top: 5px;
+  font-size:60px;
+}
+.creation {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 15px;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+}
+.title {
+  text-align:center;
+  font-size:60px;
+  padding: 5px;
+  background-color:#e6eae5;
+}
+.content-fonts{
+  font-family: 'Lato', sans-serif;
+  color:grey;
+  font-size:18px;
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+<body>
+  <div class="title">
+      All blog posts
+      <p class="lead text-muted">Search posts..</p>
+      <p class="lead text-muted"><i> <a href="#">July 2018</a>  | <a href="#">June 2018</a>  | <a href="#">May 2018</a>  | <a href="#">April 2018</a> | <a href="#">Older posts</a> </i></p>
+      <hr>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{% url 'websites' %}">Hourly progress</a>
+        <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+        <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+      </div>
+    </nav>
+  </div>
+
+
+
+
+            <!-- <div class='page'>
+              <div class='content'>
+                <h1 class="comment">Scored a round of 63(-8)on my home course!</h1>
+                <p>July consists of warm temperatures and still no sign of rain after
+                  2-3 months of drought. Scoring wise that's fine, because I feel like
+                  golf is an entirely different game now under these circumstances.</p>
+                  <br>
+
+                  <img src="{% static 'sixtythree.png'%}"  height=340 width=600 class="article-image2">
+
+                  <a class="btn btn-primary" role="button" href="blog/4">Read more</a>
+                </div>
+              </div> -->
+
+
+
+              <!-- <div class='page'>
+                <div class='content2'>
+                  <h1 class="comment">The monthly blog: July 2018</h1>
+                  <img src="{% static 'june18.jpg'%}" height=400 width=300 class="article-image2">
+                  <p>July consists of warm temperatures and still no sign of rain after
+                    2-3 months of drought. Scoring wise that's fine, because I feel like
+                    golf is an entirely different game now under these circumstances.</p>
+
+                    <br>
+                    <p>Now that we have the weather forecast discussed, let's move on to
+                      what I am doing. This picture on the right has been a foundation of change.
+                      Why? Well, what I saw disgusted me. I haven't had a lesson in a very long
+                      time and you can clearly tell, but I couldn't. Not being able to hit
+                      a draw suddenly made sense.......</p>
+
+                      <a class="btn btn-primary" role="button" href="#/1">Read more</a>
+                    </div>
+                  </div> -->
+
+
+            <!-- </div> -->
+
+
+
+          </div>
+
+
+
+          {% for blog in blogs.all %}
+          <div class="page">
+            <div class="container">
+              <div class="content">
+
+                <h2 class="heading"><strong>{{ blog.title}}</strong></h2>
+                <p class="creation">{{blog.pub_date_pretty}}</p>
+                <p class="content-fonts">{{blog.summary}}</p>
+                <br>
+                <a class="btn btn-primary btn-block" role="button" href="{% url 'detail' blog.id%}">Read more</a>
+
+              </div>
+            </div>
+            {% endfor %}
+
+            <!-- <div class="sidebar">
+              <div class="sidebar-heading">
+                <h2 class="comment">Recent posts</h2>
+              </div>
+              <br>
+
+              <ul class="sidebar-texts">
+
+                <p><a href="blog/1">July 2018 progress</a></p>
+                <br>
+                <p><a href="blog/2">Scored 63 (-8) over 18 holes on Hoge Dijk medal tees!</a></p>
+                <br>
+                <p><a href="blog/3">June 2018 progress</a></p>
+                <br>
+                <p><a href="blog/4">Kennemer open 2018</a></p>
+                <br>
+                <p><a href="blog/5">May 2018 progress</a></p>
+                <br>
+                <p><a href="blog/6">Efteling open amateur golf tour: Nowhere near proper health</a></p>
+                <br>
+                <p><a href="blog/7">Salmonella infection halted progress</a></p>
+              </ul>
+            </div> -->
+
+
+
+
+          <footer class="text-muted">
+            <div class="container text-center">
+              <p>Development by Terefs {% now "Y" %}</p>
+            </div>
+          </footer>
+        </div>
+      </body>
+      </html>

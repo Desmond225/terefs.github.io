@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <title>Floats</title>
+</head>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.column {
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 300px;
+  background-color:white;
+}
+
+.container {
+  overflow: hidden;
+  /* background-color: #e6eae5; */
+}
+
+.page {
+  width:1150px;
+  margin: 0 auto;
+  /* background-color: #e6eae5; */
+}
+
+.content {
+  margin-top:20px;
+  background-color:white;
+  padding: 20px;
+  float: left;
+  width:800px;
+}
+
+.content2 {
+  margin-top:50px;
+  background-color:white;
+  padding: 20px;
+  float: left;
+  width:700px;
+  height: 550px;
+  margin-left:55px;
+}
+.content3 {
+  margin-top:50px;
+  background-color:white;
+  padding: 20px;
+  float: left;
+  width:700px;
+  height: 700px;
+  margin-left:55px;
+}
+
+.menu {
+  height: 100px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.sidebar {
+  margin-top: 50px;
+  float:right;
+  width:300px;
+  height: 2050px;
+  margin-right:5px;
+  background-color: #e6eae5;
+  padding:20px;
+
+}
+
+.article-image {
+  float: right;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top:100px;
+}
+
+.article-image2 {
+  float:right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+}
+
+.avatar {
+  float: left;
+  width: 10px;
+  height: 250px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #778899;
+}
+.username {
+  margin-top: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.comment {
+  margin: 10px;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+p {
+  margin-bottom: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.footer {
+  overflow: hidden;
+  background-color: #e6eae5;
+}
+.welcome {
+  text-align:center;
+  font-size: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.sidebar-texts {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+
+hr.style-four {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.sidebar-heading {
+  width: 250px;
+  height: 40px;
+  position: relative;
+  background: white;
+}
+
+.sidebar-heading:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.arrow_box {
+  position: relative;
+  background: #88b7d5;
+  border: 4
+}
+.title {
+  text-align:center;
+  font-size:60px;
+  padding: 5px;
+  background-color:#e6eae5;
+}
+
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+<body>
+
+
+  <!-- <img src="media/images/ideas.jpg" height="500" width="1300" alt=""> -->
+
+
+    <div class="title">
+        Hourly progress
+        <p class="lead text-muted">Jump to...</p>
+        <p class="lead text-muted"><i> <a href="#">4000 hours-current</a>  | <a href="#">3500 hours-4000 hours</a>  | <a href="#">3000 hours-3500 hours</a>  | <a href="#">2500 -3000 hours</a> | <a href="#">current</a> </i></p>
+        <hr>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{% url 'websites' %}">Hourly progress</a>
+          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+        </div>
+      </nav>
+        <div class='container'>
+    </div>
+    <div class='page'>
+      <div class='content'>
+
+        <img src='media/images/progress.jpeg' class='article-image'/>
+
+        <h2>Hourly progress</h2>
+        <p class="blog-paragraph">01/07 - 27 holes with friends, I did commit into hitting as many draws as I could even though I am still blocking it quite often. WSR: Had some pure strikes, 81 and 39 overall from the back tees. 4180h - 91100 balls</p>
+
+        <p class="blog-paragraph">02/07 - Day off, feet were sore from too much walking. 4180h - 91100 balls</p>
+
+        <p class="blog-paragraph">03/07 - 9 holes for fun with the pro’s playing best ball, didn’t manage to win with Philip and lost 2&1 to Ash and Brian. WSR: Shot like +3 overall despite hooking it out on the 1st. 4183h - 91120 balls</p>
+
+        <p class="blog-paragraph">04/07 - Had the idea to just practice on the range to work on the draw swing, but got invited to play 12 holes afterwards. 4187h - 91200 balls</p>
+
+        <p class="blog-paragraph">05/07 - Range session in the afternoon, then played 20 holes in the evening and shot a legendary round of 63(-8) from the medals with 10 birdies! 4191h - 91300 balls</p>
+
+        <p class="blog-paragraph">06/07 - Started off with a range session in the morning, then played 9 holes on the par 3/4 course and the hot streak continued since I managed to score another peronal best round of 27 shots (-4). Had another session on the range afterwards because man, this feeling is incredible, even while putting. 4195h - 91500 balls</p>
+
+        <p class="blog-paragraph">07/07 - 12 holes from the medal tees on a very dry Hoge Dijk, shot +5 with just 1 birdie. WSR: Had an idea I was starting off again like the previous two days, however I just couldn’t focus at all since my anxiety in daily life is more active these days and makes it hard for me to focus. 4198h - 91500 balls</p>
+
+        <p class="blog-paragraph">08/07 - 9 holes on the front 9, shot +2 from the medals and then had another 3 holes before calling it because of course congestion. 4201h - 91520 balls</p>
+
+        <p class="blog-paragraph">09/07 - 18 holes with friends and played a scramble with the 3 of us. Shot 65, which could and should have been lower. 4205h - 91540 balls</p>
+
+        <p class="blog-paragraph">10/07 - Gym and range session. WSR: Having the ball position a little more back in the stance resulted in some bombs, however I need to make sure to turn my body otherwise it’s going to be a block ball. 4207h - 91640 balls</p>
+
+        <p class="blog-paragraph">11/07 - Short game on houtrak, chipping with 9i and 56* and then used to 56* to work on pitches from 30 to 70 meters. Had a short range session afterwards, even though I called it early since I was kind of drained energy wise. 4209h - 91770 balls</p>
+
+        <p class="blog-paragraph">12/07 - 18 holes on my own from the medals on an empty course, noticed how my thoughts are influencing my game so so much. Spent much time on observing thought patterns which always have to do with anxiety, and later managed to shut down these thoughts with mindfulness, albeit momentarily, which made me much more focused on hitting a proper ball on the course. WSR: Started off hot with a birdie, then lacked focus and made the turn in 38 with loads of anxious thoughts. Noticed a shift in consciousness on the back 9, simply by taking in the moment on every stroke and making sure my mind was clear. Great exercise and learning moment, made 32 on the back 9 thanks to birdies on 13,14, 15 for a round of 70, under par again. 4213h - 91770 balls</p>
+
+        <p class="blog-paragraph">13/07 - Lesson to draw out my current game using the flightscope. I am actually on par with tour pro statistics when it comes to wedges up to 7i, then I kind of lose track on distance and swing speed per club upwards. WSR: 105 mph driver, 275 yds average distance. 4216h - 91880 balls</p>
+
+        Need to address two things:
+        Long irons, I have been able to avoid these by just bombing a drive every time and when I did come into a situation of hitting a long approach I would take more club and shape it in with a weak, stinky fade. Going out on the course playing it backwards  by giving myself long shots in could be an idea here;
+        Swing weight of the club, which still is mainly caused by a poor take away. I have felt how keeping the wrists in an angle creates a much better flow, but need more ‘drag’ from the left shoulder in order to keep the connection on impact better since that’s the main miss.</p>
+
+        <p class="blog-paragraph">14/07 - 21 holes from the medal tees, shot 75 over the first 18, then had a couple of beers and made bogey, birdie, bogey on the 3 holes. 4222 hours - 91920 balls</p>
+
+        <p class="blog-paragraph">15/07 - 15 holes without driver and 3 wood, forcing myself into hitting long irons. I have to say that my par 3 shots were much better, and hit quite some good 3 irons as well from the tees. WSR: Going to have a look at my angle of attack since I wasn’t hitting divots at all with long irons, I focused on this later and felt much better even though I started hooking. Got 6 holes in, then watched the world cup final and then played the front 9 again. Still managed to shoot +3 over 15 holes from a variety of medal and the back tees, despite  hooks on the par 4 5th and par 4 8th, resulting in penalty shots. Got birdies on the 1st, 12th, 13th and 15th thanks to good approaches. 4226h - 91950 balls</p>
+        <br>
+              </div>
+            </div>
+
+            <div class="sidebar">
+              <div class="sidebar-heading">
+              <h2 class="comment">Handicap stats</h2>
+              </div>
+              <br>
+              <h4 class="comment"><i>Current handicap: 0.5</i></h4>
+              <br>
+              <h4 class="comment"><i>Lowest handicap: 0.4</i></h4>
+              <br>
+
+                <div class="sidebar-heading">
+                <h2 class="comment">Other statistics</h2>
+                </div>
+                <br>
+                <h4 class="comment"><i>Lowest round to date: 63(-8)</i></h4>
+                <br>
+                <h4 class="comment"><i>Rounds played: 502</i></h4>
+                <br>
+
+
+              <div class="sidebar-heading">
+                <h2 class="comment">Search <i>(by date)</i></h2>
+              </div>
+              <br>
+
+              <ul class="sidebar-texts">
+
+                <p><a href="blog/1">July 2018 progress</a></p>
+                <br>
+              </ul>
+              <div class="sidebar-heading">
+                <h2 class="comment">Search <i>(by hour)</i></h2>
+                <ul class="sidebar-texts">
+                  <br>
+                  <p><a href="#">4000 - current</a></p>
+                  <p><a href="#">3500 - 4000</a></p>
+                  <p><a href="#">3000 - 3500</a></p>
+                  <p><a href="#">2500 - 3000</a></p>
+
+
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+<!--
+                {% for job in jobs.all %}
+                <div class="column">
+                  <div class="avatar"></div>
+                  <h3 class='username'>{{ job.summary }}</h3>
+                  <p class='comment'>{{ job.detail }}</p>
+                  <a class ='btn btn-primary' role='button' href="media/images/resume.pdf">See more</a>
+
+                  <br>
+                </div>
+
+                {% endfor %} -->
+
+
+                <footer class="text-muted">
+                  <div class="container text-center">
+                    <p>Development by Terefs {% now "Y" %}</p>
+                  </div>
+                </footer>
+              </div>
+            </body>
+            </html>
